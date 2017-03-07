@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Beginning</title>
+		<meta charset="utf-8">
+		<style>
+h1 {
+  font-family: Calibri;
+  font-size: 42px;
+  color: SeaShell;
+}
+
+p {
+  font-family: Calibri;
+  font-size: 22px;
+}
+
+ul {
+  font-family: 'Georgia', 'Times', serif;
+  font-size: 20px;
+}
+
+img {
+  border-radius: 100%;
+}
+
+body {
+  margin: 20px;
+  padding: 20px;
+  background-image: url("http://golancourses.net/2014/wp-content/uploads/2014/01/project1-1_lowres.gif");
+  background-size: cover;
+}
+
+a {
+  color: Yellow;
+}
+		</style>
+	</head>
+	<body>
+		<h1>Welcome to The Beginning</h1>
+		<p>Hello! I'm Divyanshu Saxena, CSE undergraduate at IIT Delhi. I've prepared this site for the Development Club assignment. It has been a great deal of work to finalise this website. Although, it was given to me as an assignment, just like many others, still I feel that this site, this very site, can be my first step towards becoming a good developer. All such developing tasks interest me a lot and I have always wished to be able to work upon such things. So, here's my first webpage. I hope you like it!!</p>
+		<img  src="https://qph.ec.quoracdn.net/main-thumb-102506493-200-dwtejvpsnvlfmyhtlkxxlealtkvpdxiv.jpeg" alt="Image to be displayed" align="left" hspace="20" vspace="20"/>
+		<p>Yeah! That's me obviously. As already mentioned earlier, I'm presently a first year student at IIT Delhi, pursuing B. Tech in Computer Science and Engineering. I'm basically from Lucknow and my hobbies include listening to songs, reading books and dancing.</p>  
+		<p>Now that I've told you about myself, I would also like to know something about you. I request you to please fill up the questions given below.</p>
+		{% if q_list %}
+			<ul>
+			{% for question in q_list %}
+				<li> <a href="/Assn/{{question.id}}">{{question.ques_text}}</a></li>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<p>Thank you for sharing the information.</p>
+		{% endif %}
+	</body>
+</html>
+	
